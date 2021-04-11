@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link th:href="@{/public/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div id="container">
+    <h2>Login page</h2>
+    <form th:action="@{/data}" method="get">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" autofocus="autofocus" /required>
+
+
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate"required>
+
+        <label for="EndDate">End Date:</label>
+        <input type="date" id="EndDate" name="EndDate"required>
+
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+    <p th:if="${loginError}" class="error"></p>
+</div>
+</body>
+</html>
